@@ -16,5 +16,8 @@ services:
         git clone https://github.com/Nevenuga/telegram-gpt-bot.git /app/repository && \
         cd /app/repository && \
         pip install --no-cache-dir -r requirements.txt && \
+        # Устанавливаем правильные права на файлы
+        chmod 666 /app/.env && \
+        chmod 666 /app/session_name.session && \
         tail -f /dev/null
         # python3 telegram_bot.py --env /app/.env --session /app/session_name.session
